@@ -23,7 +23,7 @@ The objective of this project is to develop a pipeline, utilizing either a rule-
 #Usage
 To use the pipeline, provide the paths to the JSON file containing abbreviations and synonyms, and the OCR file containing the text data. Call the process_ocr function with these paths as arguments, and the pipeline will return a structured Python list of dictionaries with extracted information.
 
-python```
+```python
 import json
 from process_ocr import process_ocr
 
