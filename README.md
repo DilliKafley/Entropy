@@ -18,3 +18,19 @@ The objective of this project is to develop a pipeline, utilizing either a rule-
 - **Parameter Uniqueness:** Each parameter name must be unique within the dataset, discarding duplicates and retaining only the first instance.
 - **Date Sensitivity:** Focus solely on the latest test results, disregarding earlier data to ensure relevance and accuracy.
 - **Data Integrity:** Aim for a data integrity level exceeding 90% to ensure reliability.
+
+
+#Usage
+To use the pipeline, provide the paths to the JSON file containing abbreviations and synonyms, and the OCR file containing the text data. Call the process_ocr function with these paths as arguments, and the pipeline will return a structured Python list of dictionaries with extracted information.
+
+python```
+import json
+from process_ocr import process_ocr
+
+json_path = "abbreviations.json"
+ocr_path = "text_data.txt"
+
+output_data = process_ocr(json_path, ocr_path)
+for item in output_data:
+    print(f"Parameter: {item['parameter']}, Value: {item['value']}, Unit: {item['unit']}")
+    ```
