@@ -22,12 +22,12 @@ The objective of this project is to develop a pipeline, utilizing either a rule-
 
 # Approch
 ' The pipeline consists of several functions:
-' - `convert_json_to_dict`: Loads JSON data containing abbreviations and synonyms, and converts it into a dictionary for easy lookup.\n
-' - `extracted_list`: Processes OCR text data and extracts relevant information using regular expressions.\n
-' - `extract_items`: Matches extracted text against abbreviations and synonyms to identify relevant items./n
-' - `replace_words_in_list`: Replaces abbreviations and synonyms in extracted items with their corresponding full forms.
-' - `convert_to_dict`: Converts extracted items into dictionaries with keys for parameter, value, and unit.
-' - `handle_units`: Handles special cases in units, such as removing digits from parameters and converting digits-only units to 'NA'.
+' - `convert_json_to_dict`: Loads JSON data containing abbreviations and synonyms, and converts it into a dictionary for easy lookup.  
+' - `extracted_list`: Processes OCR text data and extracts relevant information using regular expressions.  
+' - `extract_items`: Matches extracted text against abbreviations and synonyms to identify relevant items.  
+' - `replace_words_in_list`: Replaces abbreviations and synonyms in extracted items with their corresponding full forms.  
+' - `convert_to_dict`: Converts extracted items into dictionaries with keys for parameter, value, and unit.  
+' - `handle_units`: Handles special cases in units, such as removing digits from parameters and converting digits-only units to 'NA'.  
 
 
 # Usage
