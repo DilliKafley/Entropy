@@ -21,7 +21,7 @@ The objective of this project is to develop a pipeline, utilizing either a rule-
 
 
 # Approch
-' The pipeline consists of several functions:
+' The pipeline consists of several functions:  
 ' - `convert_json_to_dict`: Loads JSON data containing abbreviations and synonyms, and converts it into a dictionary for easy lookup.  
 ' - `extracted_list`: Processes OCR text data and extracts relevant information using regular expressions.  
 ' - `extract_items`: Matches extracted text against abbreviations and synonyms to identify relevant items.  
