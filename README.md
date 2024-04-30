@@ -20,7 +20,17 @@ The objective of this project is to develop a pipeline, utilizing either a rule-
 - **Data Integrity:** Aim for a data integrity level exceeding 90% to ensure reliability.
 
 
-#Usage
+# Approch
+' The pipeline consists of several functions:
+' - `convert_json_to_dict`: Loads JSON data containing abbreviations and synonyms, and converts it into a dictionary for easy lookup.
+' - `extracted_list`: Processes OCR text data and extracts relevant information using regular expressions.
+' - `extract_items`: Matches extracted text against abbreviations and synonyms to identify relevant items.
+' - `replace_words_in_list`: Replaces abbreviations and synonyms in extracted items with their corresponding full forms.
+' - `convert_to_dict`: Converts extracted items into dictionaries with keys for parameter, value, and unit.
+' - `handle_units`: Handles special cases in units, such as removing digits from parameters and converting digits-only units to 'NA'.
+
+
+# Usage
 To use the pipeline, provide the paths to the JSON file containing abbreviations and synonyms, and the OCR file containing the text data. Call the process_ocr function with these paths as arguments, and the pipeline will return a structured Python list of dictionaries with extracted information.
 
 ```python
@@ -33,4 +43,12 @@ ocr_path = "text_data.txt"
 output_data = process_ocr(json_path, ocr_path)
 for item in output_data:
     print(f"Parameter: {item['parameter']}, Value: {item['value']}, Unit: {item['unit']}")
-    ```
+```
+# Contributing
+Contributions to this project are welcome. If you have suggestions for improvements or new features, please open an issue or submit a pull request.
+
+# License
+This project is licensed under the MIT License.
+
+# Contact
+For questions or feedback regarding this project, please contact [Dilli kafley](mailto:dillikafley25@gmail.com).
